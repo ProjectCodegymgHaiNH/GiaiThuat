@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm kiếm giá trị lớn nhất hoặc nhỏ nhất</title>
+</head>
+<body>
+<script>
+    let mangso = []
+    for (let i=0; i<10; i++){
+        let value = Math.round(Math.random()*100)
+        mangso.push(value)
+    }
+    document.write(mangso.join(" ")+"<br>")
+    timMaxMin()
+    function timMaxMin() {
+        let min = mangso[0]
+        let max = mangso[0]
+        for (let i=0; i<mangso.length;i++){
+            if (mangso[i]>max){
+                max = mangso[i]
+            }
+            if (mangso[i]<min){
+                min = mangso[i]
+            }
+        }
+        document.write("Min = "+min+" Max = "+max)
+    }
+</script>
+</body>
+</html>
