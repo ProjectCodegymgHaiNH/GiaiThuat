@@ -4,7 +4,25 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
+<body onload="soDienThoai()">
+<script>
+    function soDienThoai() {
+        let sim = ["0987654321", "0978654321", "0967854321","0911235678","0941235678","0901234567","0932145678"]
+        let Viettel = [], Vinaphone = [], Mobiphone = []
+        for (let i=0; i<sim.length; i++){
+            if (sim[i].substr(0,3) == "098" || sim[i].substr(0,3) == "097" || sim[i].substr(0,3) == "096"){
+                Viettel.push(sim[i])
+            }else if (sim[i].substr(0,3) == "094" || sim[i].substr(0,3) == "091"){
+                Vinaphone.push(sim[i])
+            }else if (sim[i].substr(0,3) == "093" || sim[i].substr(0,3) == "090"){
+                Mobiphone.push(sim[i])
+            }
+        }
+        document.write("Viettel: ["+Viettel.join(" - ")+"]<br>")
+        document.write("Vinaphone: ["+Vinaphone.join(" - ")+"]<br>")
+        document.write("Mobiphone: ["+Mobiphone.join(" - ")+"]<br>")
+    }
 
+</script>
 </body>
 </html>
